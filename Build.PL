@@ -8,6 +8,7 @@ Module::Build->new(
 		'Test::Pod'           => 1,
 		'Test::Pod::Coverage' => 0,
 		'Net::Ping::External' => 0,
+		'WWW::Mechanize'      => 0,
 	},
 	dist_version_from  => 'lib/WWW/Live365.pm',
 	create_makefile_pl => 'traditional',

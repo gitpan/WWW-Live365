@@ -3,7 +3,7 @@ package WWW::Live365;
 use warnings;
 use strict;
 
-our $VERSION = '0.1';
+our $VERSION = '0.11';
 
 use base qw(Exporter);
 our @EXPORT = qw(get_stream_url change_stream_client_ip);
