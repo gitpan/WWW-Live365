@@ -1,0 +1,12 @@
+Build.PL
+CHANGES
+examples/live365.cgi
+INSTALL
+lib/WWW/Live365.pm
+MANIFEST
+META.yml
+Makefile.PL
+README
+t/live365.t
+t/pod.t
+t/pod_coverage.t

@@ -1,0 +1,38 @@
+NAME
+
+WWW::Live365 - get Live365.com audio stream URLs
+
+DESCRIPTION
+
+This module allows you to easily obtain the direct URL of a Live365.com MP3
+stream to listen to it in your MP3 player instead being forced to go through
+the popup player on their site (which tries to stop you listening to it if you
+close the popup window).
+
+SYNOPSIS
+
+    use WWW::Live365;
+
+    # I was listening to the ambient stream from zzzone.net while I
+    # wrote this module.
+    my $stream_url = get_stream_url('doctorzz');
+
+    change_stream_client_ip($stream_url, $my_ip_address);
+
+AUTHOR
+
+Earle Martin <hex@cpan.org>
+
+<http://downlode.org/Code/Perl/>
+
+COPYRIGHTS
+
+Copyright 2007 Earle Martin. All rights reserved.
+
+Live365.com is a trademark of Live365.com, Inc.
+
+LICENSE
+
+This module is free software and released under the same license as Perl
+itself.
+
