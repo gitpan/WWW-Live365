@@ -3,12 +3,13 @@ package WWW::Live365;
 use warnings;
 use strict;
 
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 
 use base qw(Exporter);
 our @EXPORT = qw(get_stream_url change_stream_client_ip);
 
 use WWW::Mechanize;
+
 
 sub get_stream_url {
 	my $stream = shift;
@@ -43,11 +44,12 @@ sub get_stream_url {
 sub change_stream_client_ip {
 	my ($stream_url, $ip) = @_;
 	
-	eval { require Regexp::Common; };
+	our %RE;
 	
-	unless ($@) {
-        	use Regexp::Common qw(net);
-        	die "'$ip' is not a valid IP address." unless $ip =~ /$RE{net}{IPv4}/;
+	eval "use Regexp::Common qw(net)";
+	
+	if (!$@) {
+        	die "'$ip' is not a valid IP address." if $ip !~ /$RE{net}{IPv4}/;
 	}
 	
 	$stream_url =~ s/sid=(.*?)-/sid=$ip-/;

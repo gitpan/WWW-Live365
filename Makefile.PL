@@ -9,6 +9,7 @@ WriteMakefile
                            'Test::More' => '0',
                            'Test::Pod' => '1',
                            'Test::Pod::Coverage' => '0',
+                           'Test::Without::Module' => '0',
                            'WWW::Mechanize' => '0'
                          },
           'INSTALLDIRS' => 'site',

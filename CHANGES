@@ -1,2 +1,7 @@
+2007-04-16: 0.12
+	Fix problem with eval'ing "use Regexp::Common", and add new test
+	(using Test::Without::Module) to check that fallback behavior
+	works as expected.
+
 2007-04-14: 0.11
 	Initial release.
